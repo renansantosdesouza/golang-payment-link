@@ -1,0 +1,36 @@
+{{define "Edit"}}
+{{template "_head"}}
+
+{{template "_menu"}}
+
+<div class="container">
+
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-5">Editando Link</h1>
+                <p class="lead">Insira os dados para atualizar</p>
+            </div>
+        </div>
+        <form method="POST" action="update">
+            <input type="hidden" name="id" value="{{.Id}}" >
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label for="nome">Body Json:</label>
+                        <textarea id="BodyJson" name="BodyJson" rows="10" cols="100" class="form-control">{{.BodyJson}}</textarea>                        
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" value="salvar" class="btn btn-success">Atualizar</button>
+            <a class="btn btn-info" href="/">Voltar</a>
+        </form>
+    </body>
+
+</html>
+</div>
+</body>
+
+</html>
+{{end}}
